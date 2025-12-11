@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        nav a:hover { text-decoration: underline; }
+
+        section {
+            padding: 40px;
+            display: none;
+        }
+
+        #home { display: block; }
+
+        .card {
+            background: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            margin: 20px auto;
+            display: block;
+        }
+
+        .about-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .about-left img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .subtitle {
+            font-size: 22px;
+            font-weight: bold;
+            animation: fadeSlide 2s ease-in-out;
+        }
+
+        .about-right {
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .photo-grid img {
+            width: 240px;
+            height: 240px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+
+</head>
+<body>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('contact')">Contact</a>
+    <a onclick="showSection('photos')">Photos</a>
+</nav>
+
+<section id="home">
+    <div class="card">
+        <h1>Welcome to My Portfolio</h1>
+
+        <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/575180325_1409209393959913_4562106739794996729_n.jpg?_nc_cat=105&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHalvMhT22-wLcSRn3m3yNwUUoys8uaivFRSjKzy5qK8aFfC0Xh1rcpwF3GcX-pFs5vzTepxktVABgSZ8P8VG-k&_nc_ohc=SGrVd2Fd6EwQ7kNvwFPRc7i&_nc_oc=AdkjEjC0IWrDXU92qmnEyvaOPodeLC22fm-iRW7a4ifE3kyunQtqqm5cebnVyTOAf6A&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=9rlWp2XYFjWr1sSfckxUoQ&oh=00_AfmJp8k345T2nTv_kNR9_AYq_dFSWw3k1iivwf8R2g_iDg&oe=69402456" class="avatar">
+
+        <p class="subtitle">Hello! This is Analyn Polestico.</p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="card about-container">
+
+        <div class="about-left">
+            <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/575180325_1409209393959913_4562106739794996729_n.jpg?_nc_cat=105&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHalvMhT22-wLcSRn3m3yNwUUoys8uaivFRSjKzy5qK8aFfC0Xh1rcpwF3GcX-pFs5vzTepxktVABgSZ8P8VG-k&_nc_ohc=SGrVd2Fd6EwQ7kNvwFPRc7i&_nc_oc=AdkjEjC0IWrDXU92qmnEyvaOPodeLC22fm-iRW7a4ifE3kyunQtqqm5cebnVyTOAf6A&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=9rlWp2XYFjWr1sSfckxUoQ&oh=00_AfmJp8k345T2nTv_kNR9_AYq_dFSWw3k1iivwf8R2g_iDg&oe=69402456">
+        </div>
+
+        <div class="about-right">
+            <h1>About Me</h1>
+            <h2>Analyn Casquejo Polestico</h2>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Age:</strong> 23</p>
+            <p><strong>Address:</strong> Fatima, Purok 7 Proper, San Vicente, Trinidad, Bohol</p>
+            <p><strong>Hobbies:</strong> Watching Movies, Singing, Reading, Playing Volleyball, Dancing</p>
+            <p style="margin-top: 15px;">I am a college student pursuing a BS in Information Systems.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h1>Contact Information</h1>
+        <p>📧 <strong>Email:</strong> polesticoanalyn20@gmail.com</p>
+        <p>📞 <strong>Phone:</strong> 09936154483</p>
+        <p>🌐 <strong>Facebook:</strong> <a href="https://www.facebook.com/analyn.polestico.92" target="_blank">Click to Visit Profile</a></p>
+        <p>📸 <strong>TikTok:</strong> <a href="https://www.tiktok.com/@atenamz18?_r=1&_t=ZS-927u3V7blHE" target="_blank">Click to Visit Profile</a></p>
+    </div>
+</section>
+
+<section id="photos">
+    <div class="card">
+        <h1>Memories to Keep</h1>
+
+        <div class="photo-grid" style="display:flex; justify-content:center; flex-wrap:wrap; gap:25px; margin-top:25px;">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/544924541_1361500065397513_4238315342662465186_n.jpg?_nc_cat=100&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEnDCRlYtdNwMSFj4xGSqUvswpwhSQPD_CzCnCFJA8P8BJw3tfMsb70mBJ9XQeHqvDp7ZYNwYrrvIIzND739QDa&_nc_ohc=2MvV1HpH4_YQ7kNvwE46a1r&_nc_oc=AdkEUmxn5wnG9CNuN75u9EKUDEIktMP-szUfYMxkdkujHMkTjn6p08Fjik4GAr5zQ-k&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=7tTgCCGQUqh473iYWwArMw&oh=00_AflBK4HdJrDcCvtvuV3wMzd1c4yLbOxmpKqbRu4xw895xQ&oe=69407C7E" alt="Photo">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/583318906_1422181159329403_2781960646550739839_n.jpg?_nc_cat=101&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeEr7O8YGIDCk1wJnWrWeRUGnoSLke7mPh6ehIuR7uY-Hl_xJUQfvYOJgVwiI_mcdVrLPOEBEYiO_MWiPy6JCfZc&_nc_ohc=hLF2-uv_tnkQ7kNvwGH3Vak&_nc_oc=AdmLkhTqqMjLHCM73k8egW5FWLQxLlZLcuV3QGHL9KiB8cPNzVSgx8YOkjCPXUURS00&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=c-h3f843jkVI-Tt5GqWxXw&oh=00_AflgOROnQTL-4sHJqMuDbQFGMM6g0O-j5rd0-xyihJmsdg&oe=6940AAB2" alt="Photo">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/468844464_1155270659353789_4970177892521676181_n.jpg?_nc_cat=108&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeF7Js9kMtH52yiLFM--zNo5AHyd7d_UIGkAfJ3t39QgaTAZihY0_WQwySFajnnMX81vAbIDd1BM4Kw2BFjD157R&_nc_ohc=FVLkEchJBmoQ7kNvwGzJJQn&_nc_oc=AdmAz_4CN9S0CKbEboY3OOdkcesw82-gcnemW2ku35JpgoAiCz0VUQCPFS2T1BBFp5s&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=taJJh7Q_yTdgrUYp9JHxcQ&oh=00_AfnJEcLW0nSlUtTTltUpl8WcPta-mzUgE_omMZd9MqUxyg&oe=6940AA44" alt="Photo">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/481217927_1218440359703485_8830208027285646913_n.jpg?_nc_cat=100&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGvSBX99LJO6O8gwqFTibiYmpWaDZ75mK6alZoNnvmYrmE-klc-YG-Q1or2whXy9TJ8-9652X5P9gDMtFZHNaBx&_nc_ohc=40SC1T4_5ZwQ7kNvwG8Cd_H&_nc_oc=Adn4OHZf3wMmhzMMPOPtE4sRc80YrPp-Qc-1k8cTKHnu_oPrWTTqM9b65-CbX7ErZ9Y&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=0XRUZIB__e5NnlPAy_FIXg&oh=00_Afl9jrtDsBqKn8v7XRvMugRlmaEQnghIYWTRYcbgJYwgmw&oe=69409BCC" alt="Photo">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/481243395_1218437193037135_4297265003200731933_n.jpg?_nc_cat=101&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEKNcCIPINyk6Wj0iVg205fwF2ysFhHmtnAXbKwWEea2TJTz7G9ibLbg3aGCxszKnn9_QlVBN9P2Q4rVokNiL63&_nc_ohc=xG99cvZgTv8Q7kNvwF9Webd&_nc_oc=Adm3lFJDgDVCx_2l9tTwyd6mpcwgzglZ6aOocBXNCjVPl-h2BAB9PxqO_CWla_LYPx0&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=nTy5zZQckUUvIdSlBa4lSw&oh=00_AfkeY225MdOr8R9f9kNuz5JXot6YdQmZ5CFDBJBNUgM9Wg&oe=694096E1" alt="Photo">
+            <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-6/481075962_1213970860150435_1892380822582978925_n.jpg?_nc_cat=107&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE2E3_eimzsPYrQmRXHjE-gw56stk001APDnqy2TTTUAwaGK1JD16at4Hp-jBcpD57SuiGTpKeULU-y0E1A2Vn6&_nc_ohc=wSu7lpF16zEQ7kNvwFMWd_L&_nc_oc=AdmH2JBBT9AarGfjDUeP74nhT4RM53U9B0GZ7XOgoggBnbh4NSg2U43KUg5FZuhid6U&_nc_zt=23&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=SLD-ApV54o3J1sfD4oJRaQ&oh=00_Afli9OSDe06yDDf3Evb73ndkp4Vn5ZKYhudQjfZTYknyhQ&oe=694085D5" alt="Photo">
+        </div>
+    </div>
+</section>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll("section").forEach(s => s.style.display = "none");
+        document.getElementById(id).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
